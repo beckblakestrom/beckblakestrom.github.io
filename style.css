@@ -1,0 +1,76 @@
+/* resets */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* styling */
+
+.page-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 45% 45% 5% 5%;
+	grid-template-areas:
+		"intro img"
+		"description img"
+		"footer footer"
+		"mit mit";
+	justify-items: center;
+	align-items: center;
+}
+
+.intro {
+	font-size: 6rem;
+	grid-area: intro;
+	align-self: end;
+}
+
+.description {
+	font-size: 4rem;
+	grid-area: description;
+	align-self: start;
+}
+
+.img-container {
+	width: 50%;
+	grid-area: img;
+}
+
+.img {
+	width: 100%;
+	border-radius: 2%;
+	box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+	font-size: 3rem;
+	grid-area: footer;
+}
+
+.mit {
+	grid-area: mit;
+	font-size: 2rem;
+	color: red;
+}
