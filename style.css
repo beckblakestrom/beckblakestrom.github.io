@@ -39,16 +39,19 @@ a {
 		"mit mit";
 	justify-items: center;
 	align-items: center;
+	padding: 4rem;
 }
 
 .intro {
 	font-size: 6rem;
 	grid-area: intro;
 	align-self: end;
+	justify-self: left;
 }
 
 .description {
-	font-size: 4rem;
+	font-size: 3rem;
+
 	grid-area: description;
 	align-self: start;
 }
