@@ -19,5 +19,5 @@ aboutBox.onclick = () => {
 };
 
 leftHeader.onclick = () => {
-	document.body.classList.toggle("invert");
+	pageContainer.classList.toggle("invert");
 };
