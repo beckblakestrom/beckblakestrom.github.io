@@ -1,9 +1,11 @@
 @use "sass:math";
 
 .page-container {
+	position: fixed;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	height: 100vh;
+	height: 100%;
+	width: 100%;
 }
 
 .left {
@@ -172,7 +174,7 @@
 	transition: all 1s;
 
 	&-stats {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 
 		@include media(desktop) {
 			font-size: 3rem;
@@ -181,7 +183,7 @@
 }
 
 .about__footer-text {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	width: 75%;
 
 	@include media(desktop) {

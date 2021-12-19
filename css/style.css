@@ -48,9 +48,11 @@ a {
 }
 
 .page-container {
+  position: fixed;
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 .left {
@@ -204,7 +206,7 @@ a {
   transition: all 1s;
 }
 .about__footer-content-stats {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   .about__footer-content-stats {
@@ -213,7 +215,7 @@ a {
 }
 
 .about__footer-text {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   width: 75%;
 }
 @media screen and (min-width: 1024px) and (orientation: landscape) {
