@@ -1,0 +1,444 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+}
+
+.left {
+  background-color: #fafafa;
+  mix-blend-mode: exclusion;
+  position: relative;
+  font-family: lores-21-serif, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.left__header {
+  width: 100%;
+  height: 5vh;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-out;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .left__header {
+    font-size: 5rem;
+    height: 10vh;
+  }
+}
+.left__header:hover {
+  cursor: pointer;
+  background-color: #05f09a;
+}
+.left__header-text {
+  transition: all 0.5s ease-out;
+}
+.left__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  transition: all 1s;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .left__footer {
+    font-size: 5rem;
+  }
+}
+.left__footer-box {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: #fafafa;
+  height: 5vh;
+  border-top: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  transition: all 1s;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .left__footer-box {
+    height: 10vh;
+  }
+}
+.left__footer-header {
+  position: absolute;
+  top: 0;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  z-index: 1;
+  transition: all 1s;
+}
+.left__footer-header:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .left__footer-header {
+    height: 10vh;
+  }
+}
+.left__footer-link-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateY(150%);
+  transition: all 1s;
+}
+.left__footer-link {
+  transition: all 0.5s;
+}
+.left__footer-link:hover {
+  transform: translate(-5px, -5px);
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.left__name {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .left__name {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+}
+.left__git {
+  font-size: 3.5rem;
+  position: absolute;
+  right: 3%;
+  bottom: 30%;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .left__git {
+    font-size: 15rem;
+    line-height: 15rem;
+    bottom: 22%;
+  }
+}
+
+.up-arrow {
+  font-size: 2.5rem;
+  color: black;
+  transition: all 0.5s cubic-bezier(0.59, 0.37, 0.26, 0.97);
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .up-arrow {
+    font-size: 5rem;
+  }
+}
+
+.about__footer-content {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateY(50vh);
+  transition: all 1s;
+}
+.about__footer-content-stats {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .about__footer-content-stats {
+    font-size: 3rem;
+  }
+}
+
+.about__footer-text {
+  font-size: 1.6rem;
+  width: 75%;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .about__footer-text {
+    font-size: 2.5rem;
+  }
+}
+
+.right {
+  position: relative;
+  background-color: black;
+  font-family: reross-quadratic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #05f09a;
+  mix-blend-mode: screen;
+}
+.right__menu {
+  background-color: black;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 5vh;
+  border-bottom: 2px solid #05f09a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transition: all 1s;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .right__menu {
+    font-size: 5rem;
+    height: 10vh;
+  }
+}
+.right__menu:hover .menu-arrow {
+  filter: none;
+  cursor: pointer;
+  transform: scaleY(-1);
+  opacity: 1;
+}
+.right__menu-header {
+  position: absolute;
+  bottom: 0;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.right__menu-header:hover {
+  cursor: pointer;
+}
+.right__menu-header:hover .right__menu-header-text {
+  letter-spacing: 0.5rem;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .right__menu-header {
+    height: 10vh;
+  }
+}
+.right__menu-header-text {
+  transition: all 0.5s cubic-bezier(0.59, 0.37, 0.26, 0.97);
+}
+.right__menu-link-container {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateY(-300%);
+  transition: all 1s;
+}
+.right__menu-link {
+  transition: all 0.5s ease-out;
+}
+.right__menu-link:hover {
+  color: #2a333c;
+  letter-spacing: 0.5rem;
+}
+.right__name {
+  font-size: 3rem;
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .right__name {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+}
+.right__hub {
+  font-size: 3.5rem;
+  position: absolute;
+  left: 3%;
+  bottom: 30%;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .right__hub {
+    font-size: 15rem;
+    line-height: 15rem;
+    bottom: 22%;
+  }
+}
+
+.menu-arrow {
+  filter: brightness(0.2) grayscale(100%);
+  opacity: 0.75;
+  position: absolute;
+  top: -100%;
+  transition: all 1s;
+}
+
+.headshot {
+  position: fixed;
+  height: 25%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .headshot {
+    height: 80%;
+  }
+}
+
+.open {
+  height: 47.5vh;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .open {
+    height: 45vh;
+  }
+}
+
+.upside-down {
+  transform: rotate(-180deg);
+}
+
+.translate {
+  transform: translate(0);
+}
+
+.flex-center {
+  width: 75%;
+}
+
+.red {
+  color: #ff4400;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.vertical-align {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom {
+  top: 2%;
+}
+
+.yellow {
+  color: #fce954;
+}
+
+.border-bottom-red {
+  border-bottom-color: #fce954;
+}
+
+.hover {
+  color: rgba(42, 51, 60, 0.5);
+}
+
+.below {
+  transform: translateY(100%) skewX(90deg);
+  letter-spacing: 10rem;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.page-under-construction {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: monospace;
+  background: #73c8a9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #373b44, #73c8a9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #373b44, #73c8a9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.page-under-construction > * {
+  margin: 1rem;
+  color: white;
+}
+
+.back {
+  color: black;
+  padding: 1rem 3rem;
+  background-color: white;
+  border-radius: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.back:hover {
+  transform: translateY(-2px);
+}
+
+/*# sourceMappingURL=style.css.map */

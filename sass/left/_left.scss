@@ -1,0 +1,190 @@
+@use "sass:math";
+
+.page-container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	height: 100vh;
+}
+
+.left {
+	background-color: $color-white;
+	mix-blend-mode: exclusion;
+	position: relative;
+	@include lores;
+	&__header {
+		width: 100%;
+		height: 5vh;
+		border-bottom: 2px solid $color-black;
+
+		// content positioning
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.5rem;
+
+		transition: all 0.5s ease-out;
+
+		@include media(desktop) {
+			font-size: 5rem;
+			height: 10vh;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			background-color: $color-green;
+		}
+
+		&-text {
+			transition: all 0.5s ease-out;
+		}
+	}
+
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+
+		// content positioning
+		display: flex;
+		flex-direction: column;
+		font-size: 2rem;
+
+		// transition
+		transition: all 1s;
+
+		@include media(desktop) {
+			font-size: 5rem;
+		}
+
+		&-box {
+			width: 100%;
+			position: relative;
+			z-index: +1;
+			background-color: $color-white;
+			height: 5vh;
+			border-top: 2px solid $color-black;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			overflow: hidden;
+
+			@include media(desktop) {
+				height: 10vh;
+			}
+
+			// transition
+			transition: all 1s;
+		}
+
+		&-header {
+			position: absolute;
+			top: 0;
+			height: 5vh;
+			width: 100%;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 3%;
+			z-index: +1;
+			transition: all 1s;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			@include media(desktop) {
+				height: 10vh;
+			}
+		}
+
+		&-link-container {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			transform: translateY(150%);
+			transition: all 1s;
+		}
+
+		&-link {
+			transition: all 0.5s;
+
+			&:hover {
+				transform: translate(-5px, -5px);
+				text-shadow: 5px 5px 0 rgba(black, 0.5);
+			}
+		}
+	}
+
+	&__name {
+		position: absolute;
+		right: 3%;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 3rem;
+
+		@include media(desktop) {
+			font-size: 15rem;
+			line-height: 15rem;
+		}
+	}
+
+	&__git {
+		font-size: 3.5rem;
+		position: absolute;
+		right: 3%;
+		bottom: 30%;
+
+		@include media(desktop) {
+			font-size: 15rem;
+			line-height: 15rem;
+			bottom: 22%;
+		}
+	}
+}
+
+.up-arrow {
+	font-size: 2.5rem;
+	color: $color-black;
+	transition: all 0.5s cubic-bezier(0.59, 0.37, 0.26, 0.97);
+
+	@include media(desktop) {
+		font-size: 5rem;
+	}
+}
+
+.about__footer-content {
+	position: absolute;
+	bottom: 0;
+	height: 90%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+
+	transform: translateY(50vh);
+	transition: all 1s;
+
+	&-stats {
+		font-size: 1.6rem;
+
+		@include media(desktop) {
+			font-size: 3rem;
+		}
+	}
+}
+
+.about__footer-text {
+	font-size: 1.6rem;
+	width: 75%;
+
+	@include media(desktop) {
+		font-size: 2.5rem;
+	}
+}
